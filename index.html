@@ -1,0 +1,152 @@
+﻿<!---------------------------------------------------------------------->
+<FONT FACE=Arial COLOR="#00AA00">
+<!---------------------------------------------------------------------->
+<CENTER><script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+<script type="text/javascript">
+jQuery(window).load(function($){
+atualizaRelogio();
+});
+</script>
+</HEAD>
+<BODY>
+<div>
+<output id="data" style="font-family: 'arial black', 'avant garde'; font-size: 24px;"></output>
+</div>
+<div>
+<output id="hora" style="font-family: 'arial black', 'avant garde'; font-size: 24px;"></output>				
+</div>			
+</BODY>
+<script>
+function atualizaRelogio(){ 
+var momentoAtual = new Date();
+var vhora = momentoAtual.getHours();
+var vminuto = momentoAtual.getMinutes();
+var vsegundo = momentoAtual.getSeconds();
+var vdia = momentoAtual.getDate();
+var vmes = momentoAtual.getMonth() + 1;
+var vano = momentoAtual.getFullYear();
+if (vdia < 10){ vdia = "0" + vdia;}
+if (vmes < 10){ vmes = "0" + vmes;}
+if (vhora < 10){ vhora = "0" + vhora;}
+if (vminuto < 10){ vminuto = "0" + vminuto;}
+if (vsegundo < 10){ vsegundo = "0" + vsegundo;}
+dataFormat = vdia + " / " + vmes + " / " + vano;
+horaFormat = vhora + " : " + vminuto + " : " + vsegundo;
+document.getElementById("data").innerHTML = dataFormat;
+document.getElementById("hora").innerHTML = horaFormat;
+setTimeout("atualizaRelogio()",1000);
+}
+</script>	
+</HTML>
+</FONT>
+
+
+
+
+
+<H1><FONT COLOR="#rrggbb">O SITE APARECERA EM:</FONT></H1></CENTER>
+<FONT FACE=Arial COLOR="#FF0000">
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+p {
+  text-align: center;
+  font-size: 40px;
+  margin-top: 0px;
+}
+</style>
+</head>
+<body>
+
+<p id="demo"></p>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Jan 20, 2022 12:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "COPIE E COLE NO NAVEGADOR: </FONT> <h4> https://www.w3schools.com/howto/default_page3.asp</h4>";
+  }
+}, 1000);
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h4 {
+  color: white;
+  text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+</style>
+</head>
+<body>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    -webkit-animation: colorchange 60s infinite; 
+    animation: colorchange 60s infinite;
+}
+@-webkit-keyframes colorchange {
+     0%  {background: #33FFF3;}
+    25%  {background: #78281F;}
+    50%  {background: #117A65;}
+    75%  {background: #DC7633;}
+    100% {background: #9B59B6;}
+}
+@keyframes colorchange {
+     0%  {background: #33FFF3;}
+    25%  {background: #78281F;}
+    50%  {background: #117A65;}
+    75%  {background: #DC7633;}
+    100% {background: #9B59B6;}
+}   
+</style>
+</head>
+<body>
+</body>
+</html>
+
+
+
